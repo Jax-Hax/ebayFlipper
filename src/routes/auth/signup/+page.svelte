@@ -1,0 +1,1 @@
+<p>Check your email for a confirmation link.</p>

@@ -41,6 +41,7 @@
 		"@supabase/supabase-js": "^2.47.10",
 		"@tailwindcss/container-queries": "^0.1.1",
 		"@tailwindcss/forms": "^0.5.9",
-		"@tailwindcss/typography": "^0.5.15"
+		"@tailwindcss/typography": "^0.5.15",
+		"web-push": "^3.6.7"
 	}
 }

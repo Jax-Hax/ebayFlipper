@@ -1,0 +1,35 @@
+{
+    "name": "EBay Flipper",
+    "display": "standalone",
+    "start_url": "/start",
+    "theme_color": "blue",
+    "background_color": "black",
+    "icons": [
+		{
+		    "src": "icon_masked_144x144.png",
+		    "type": "image/png",
+		    "sizes": "144x144"
+		},
+        {
+		    "src": "icon_masked.png",
+		    "type": "image/png",
+		    "sizes": "1024x1024"
+		},
+        {
+		    "src": "icon_masked.png",
+		    "type": "image/png",
+		    "sizes": "1024x1024",
+            "purpose": "maskable"
+		}
+    ],
+    "screenshots": [
+        {
+         "src": "cognnect.webp",
+          "sizes": "1024x1024",
+          "type": "image/webp",
+          "form_factor": "wide",
+          "label": "Cognnect Computer"
+        }
+    ]
+ }
+ 
