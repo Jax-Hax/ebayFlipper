@@ -21,15 +21,6 @@
 		    "sizes": "1024x1024",
             "purpose": "maskable"
 		}
-    ],
-    "screenshots": [
-        {
-         "src": "cognnect.webp",
-          "sizes": "1024x1024",
-          "type": "image/webp",
-          "form_factor": "wide",
-          "label": "Cognnect Computer"
-        }
     ]
  }
  
