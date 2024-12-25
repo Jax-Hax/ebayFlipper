@@ -1,5 +1,6 @@
 <script lang="ts">
   import { superForm } from 'sveltekit-superforms';
+	import Header from './Header.svelte';
 
   let { data } = $props();
 
@@ -7,6 +8,14 @@
   const { form } = superForm(data.form);
 </script>
 
+<svelte:head>
+	<title>eFlipper</title>
+	<meta
+		name="description"
+		content="Make eBay flipping easier!"
+	/>
+</svelte:head>
+<Header current="Home"/>
 <form method="POST" action="?/login">
 	<label>
 		Email
