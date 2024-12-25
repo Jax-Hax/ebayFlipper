@@ -1,11 +1,12 @@
 <script lang="ts">
   import { superForm } from 'sveltekit-superforms';
 	import Header from './Header.svelte';
+	import TextInput from '$lib/components/TextInput.svelte';
 
   let { data } = $props();
 
   // Client API:
-  const { form } = superForm(data.form);
+  const superform = superForm(data.form);
 </script>
 
 <svelte:head>
@@ -17,14 +18,16 @@
 </svelte:head>
 <Header current="Home"/>
 <form method="POST" action="?/login">
-	<label>
+	<TextInput superform={superform} field="email" />
+	<TextInput superform={superform} field="password" />
+	<!--<label>
 		Email
 		<input name="email" type="email" bind:value={$form.email} />
 	</label>
 	<label>
 		Password
 		<input name="password" type="password" bind:value={$form.password} />
-	</label>
+	</label>-->
 	<button>Login</button>
 	<button formaction="?/signup">Sign up</button>
 </form>

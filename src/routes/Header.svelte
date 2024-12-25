@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Button, Input } from 'flowbite-svelte';
+	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Button } from 'flowbite-svelte';
 	export let current: string;
 </script>
 <div class="relative px-8 max-md:mb-[4.25rem] mb-20">
@@ -10,8 +10,8 @@
 		>
 	</NavBrand>
 	<div class="flex md:order-2">
-		<Button size="sm">Login</Button>
-		<Button size="sm">Signup</Button>
+		<Button size="md" pill color="light">Log in</Button>
+		<Button size="md" pill class="ml-2">Sign up</Button>
 		<NavHamburger />
 	</div>
 	<NavUl class="order-1">
