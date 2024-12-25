@@ -2,11 +2,14 @@
   import { superForm } from 'sveltekit-superforms';
 	import Header from './Header.svelte';
 	import TextInput from '$lib/components/TextInput.svelte';
+	import Auth from './Auth.svelte';
 
   let { data } = $props();
 
   // Client API:
   const superform = superForm(data.form);
+  let signup = $state(false);
+  let login = $state(false);
 </script>
 
 <svelte:head>
@@ -16,18 +19,5 @@
 		content="Make eBay flipping easier!"
 	/>
 </svelte:head>
-<Header current="Home"/>
-<form method="POST" action="?/login">
-	<TextInput superform={superform} field="email" />
-	<TextInput superform={superform} field="password" />
-	<!--<label>
-		Email
-		<input name="email" type="email" bind:value={$form.email} />
-	</label>
-	<label>
-		Password
-		<input name="password" type="password" bind:value={$form.password} />
-	</label>-->
-	<button>Login</button>
-	<button formaction="?/signup">Sign up</button>
-</form>
+<Header current="Home" bind:login bind:signup loggedIn={data.loggedIn} />
+<Auth bind:signup bind:login {superform} />

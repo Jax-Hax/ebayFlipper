@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Button } from 'flowbite-svelte';
 	export let current: string;
+	export let signup: boolean;
+	export let login: boolean;
+	export let loggedIn: boolean;
 </script>
 <div class="relative px-8 max-md:mb-[4.25rem] mb-20">
 <Navbar class="px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 start-0 border-b">
@@ -10,8 +13,12 @@
 		>
 	</NavBrand>
 	<div class="flex md:order-2">
-		<Button size="md" pill color="light">Log in</Button>
-		<Button size="md" pill class="ml-2">Sign up</Button>
+		{#if loggedIn}
+			<Button size="md" pill href="/dashboard">Dashboard</Button>
+		{:else}
+		<Button size="md" pill color="light" on:click={() => login = true}>Log in</Button>
+		<Button size="md" pill class="ml-2" on:click={() => signup = true}>Sign up</Button>
+		{/if}
 		<NavHamburger />
 	</div>
 	<NavUl class="order-1">

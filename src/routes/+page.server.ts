@@ -10,13 +10,11 @@ const authSchema = z.object({
 });
 
 export const load: PageServerLoad = async ({ locals: { supabase, session } }) => {
-  if (session) {
-    redirect(303, '/dashboard')
-  }
+  let loggedIn = session ? true : false;
   const form = await superValidate(zod(authSchema));
 
   // Always return { form } in load functions
-  return { form };
+  return { form, loggedIn };
 }
 
 export const actions: Actions = {
