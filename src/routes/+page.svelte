@@ -2,6 +2,7 @@
   import { superForm } from 'sveltekit-superforms';
 	import Header from './Header.svelte';
 	import Auth from './Auth.svelte';
+	import BackgroundImage from '$lib/components/BackgroundImage.svelte';
 
   let { data } = $props();
 
@@ -20,3 +21,6 @@
 </svelte:head>
 <Header current="Home" bind:login bind:signup loggedIn={data.loggedIn} />
 <Auth bind:signup bind:login {superform} />
+<BackgroundImage alt="hero" src="hero-desktop.webp" heroBackground={true}>
+	<p>test</p>
+</BackgroundImage>

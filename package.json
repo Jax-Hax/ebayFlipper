@@ -13,8 +13,7 @@
 		"lint": "prettier --check . && eslint ."
 	},
 	"overrides": {
-		"wrap-ansi": "7.0.0",
-		"string-width": "4.1.0"
+		"string-width": "4.2.3"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.3",
