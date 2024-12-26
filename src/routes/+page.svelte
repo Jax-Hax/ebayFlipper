@@ -1,7 +1,6 @@
 <script lang="ts">
   import { superForm } from 'sveltekit-superforms';
 	import Header from './Header.svelte';
-	import TextInput from '$lib/components/TextInput.svelte';
 	import Auth from './Auth.svelte';
 
   let { data } = $props();
