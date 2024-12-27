@@ -6,7 +6,7 @@
 	export let loggedIn: boolean;
 </script>
 <div class="relative px-8 max-md:mb-[3.75rem] mb-[4.5rem]">
-<Navbar class="px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 start-0 border-b">
+<Navbar class="px-2 sm:px-4 fixed w-full z-20 top-0 start-0 border-b">
 	<NavBrand href="/">
 		<img src="/logo-with-background.webp" class="me-3 h-9" alt="Flowbite Logo" />
 		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">eFlipper</span
